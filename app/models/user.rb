@@ -8,4 +8,8 @@ class User < ApplicationRecord
     validates :username, uniqueness: { case_sensitive: false }
     validates :username, :email, :password, presence: true
     validates_exclusion_of :age, :in => 1..17, :message => "Must be at least 18 years of age to register"
+
+    def created_date
+        return self.created_at.strftime('%m/%-d/%Y')
+    end
 end

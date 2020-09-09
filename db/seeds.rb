@@ -12,19 +12,19 @@ VaccinationRecord.create!(
     shingles: false
 )
 
-180.times do |index|
+45.times do |index|
 SugarScreen.create(
         user_id:1,
-        result:rand(110..190),
+        result:rand(105..200),
         date: DateTime.now - 365 + (index + 1)
 )
 end
 
-180.times do |index|
+45.times do |index|
     BpScreen.create(
             user_id:1,
             systolic_pressure:rand(110..200),
-            diastolic_pressure:rand(80..130),
+            diastolic_pressure:rand(80..120),
             date: DateTime.now - 365 + (index + 1)
     )
 end

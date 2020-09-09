@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       post '/sugarscreen', to: 'sugar_screens#create'
       post '/bpscreen', to: 'bp_screens#create'
       post '/apicall', to: 'api_posts#api_post'
+      post '/apineeds', to: 'api_posts#api_needs'
+      post '/apinutrition', to: 'api_posts#api_nutrition'
       post '/vaccineform', to: 'vaccination_records#create'
 
     end
