@@ -17,10 +17,10 @@ class Api::V1::UsersController < ApplicationController
         render json: user.to_json(
             :include => {
                 :bp_screens => {
-                    :methods => [:created_date]
+                    :methods => [:created_date, :display_date]
                 },
                 :sugar_screens => {
-                    :methods => [:created_date]
+                    :methods => [:created_date, :display_date]
                 },
                 :vaccination_record => {
                     :methods => [:created_date]
@@ -35,10 +35,10 @@ class Api::V1::UsersController < ApplicationController
         render json: user.to_json(
             :include => {
                 :bp_screens => {
-                    :methods => [:created_date]
+                    :methods => [:created_date, :display_date]
                 },
                 :sugar_screens => {
-                    :methods => [:created_date]
+                    :methods => [:created_date, :display_date]
                 },
                 :vaccination_record => {
                     :methods => [:created_date]

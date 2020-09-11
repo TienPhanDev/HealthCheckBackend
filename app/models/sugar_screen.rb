@@ -8,4 +8,8 @@ class SugarScreen < ApplicationRecord
     def created_date
         return self.created_at.strftime('%m/%-d/%Y')
     end
+
+    def display_date
+        return self.date.strftime('%m/%-d/%Y')
+    end
 end

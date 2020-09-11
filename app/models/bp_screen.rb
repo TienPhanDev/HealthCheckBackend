@@ -8,7 +8,11 @@ class BpScreen < ApplicationRecord
     validates :diastolic_pressure, numericality: { only_integer: true }
 
     def created_date
-        return self.created_at.strftime('%m/%d/%Y')
+        return self.created_at.strftime('%m/%-d/%Y')
+    end
+
+    def display_date
+        return self.date.strftime('%m/%-d/%Y')
     end
 
 end
